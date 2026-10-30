@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Santorinni — Portfolio — design reference
 
-## Getting Started
+This is a design mockup created in a visual design tool, exported as a
+standalone page. Treat it as a REFERENCE MOCKUP, not production code:
+the markup and inline styles carry the design's precise values — colors,
+font sizes, spacing, radii, shadows, layout — which an implementation
+should replicate faithfully in its own components and styling system
+rather than copy wholesale.
 
-First, run the development server:
+## Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- `Main.dc.html` — the artboard (a Design Component: an `<x-dc>`
+  template + a small logic class). The values to replicate live in its
+  inline `style="…"` attributes and the `<helmet><style>` block.
+- `assets/` — files uploaded to the design (images, fonts, media)
+- `support.js`, `vendor/react*.js` — the runtime that renders the
+  component in a browser; not part of the design.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Uploaded files
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Images, fonts and media uploaded to the design are written once each under
+`assets/` — 1 in this export — and the exported files refer to them there. A
+reference a script puts together while the page runs (for example
+`"/_blob/" + id`) is not rewritten and does not load from this folder.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Viewing
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Serve the folder (e.g. `python3 -m http.server`) and open `Main.dc.html`;
+some browsers block the scripts over file://.
