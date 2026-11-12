@@ -46,6 +46,49 @@ button{font-family:inherit}
   min-width: 0;
 }
 
+
+.drive-card {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 32px;
+  background: #0E0E10;
+  border: 1px solid #3B2563;
+  color: #F4F4F5;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 0;
+  border-radius: 12px;
+  transition: background .3s, border-color .3s;
+}
+
+.drive-card:hover {
+  background: #17121F;
+  border-color: #8B5CF6;
+}
+
+.drive-card span {
+  color: #8B5CF6;
+  font-size: 13px;
+  letter-spacing: .22em;
+}
+
+.drive-card strong {
+  font-size: clamp(20px, 2.5vw, 32px);
+}
+
+.drive-card small {
+  color: #A1A1AA;
+  font-size: 14px;
+}
+
+
 /* VIDEO RATIOS */
 .a1, .a3, .a5, .a7 .a9 {
   aspect-ratio: 16 / 9;
@@ -308,9 +351,24 @@ button{font-family:inherit}
 
       </button>
 
+ 
     </sc-for>
 
+    <a
+      href="https://drive.google.com/drive/u/0/folders/1SEp49GRXFxKu6gSdgnfb8rL5Io2us_yF"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="drive-card"
+    >
+      <span>MORE PROJECTS</span>
+      <strong>VIEW FULL PORTFOLIO ↗</strong>
+      <small>Explore my complete collection</small>
+    </a>
+
   </div>
+
+  <!-- VERTICAL VIDEOS -->
+
 
   <!-- VERTICAL VIDEOS -->
   <div class="work-column">
@@ -395,15 +453,27 @@ button{font-family:inherit}
 </section>
 
 
+
 <section id="about" class="pad" style="padding:200px 64px 0">
-<div class="two" style="display:grid;grid-template-columns:1fr 2fr;gap:64px">
-<h2 style="margin:0;font-size:14px;letter-spacing:.28em;text-transform:uppercase;font-weight:400;color:#8B5CF6">{{t.aboutLabel}}</h2>
-<div>
-<p style="margin:0 0 40px;font-size:clamp(28px,3.4vw,48px);font-weight:300;line-height:1.2;letter-spacing:-.02em">{{t.about1}}</p>
-<p style="margin:0 0 20px;max-width:620px;color:#A1A1AA;font-size:18px">{{t.about2}}</p>
-<p style="margin:0;max-width:620px;color:#A1A1AA;font-size:18px">{{t.about3}}</p>
-</div>
-</div>
+  <div class="two" style="display:grid;grid-template-columns:1fr 2fr;gap:64px">
+
+    <div>
+      <h2 style="margin:0;font-size:14px;letter-spacing:.28em;text-transform:uppercase;font-weight:400;color:#8B5CF6">{{t.aboutLabel}}</h2>
+
+      <img
+        src="./assets/images/about.png"
+        alt="Matheus Lopes"
+        style="display:block;width:400px;height:400px;max-width:100%;margin-top:32px;border-radius:50%;object-fit:cover;object-position:center 40%;"
+      />
+    </div>
+
+    <div>
+      <p style="margin:0 0 40px;font-size:clamp(28px,3.4vw,48px);font-weight:300;line-height:1.2;letter-spacing:-.02em">{{t.about1}}</p>
+      <p style="margin:0 0 20px;max-width:620px;color:#A1A1AA;font-size:18px">{{t.about2}}</p>
+      <p style="margin:0;max-width:620px;color:#A1A1AA;font-size:18px">{{t.about3}}</p>
+    </div>
+
+  </div>
 </section>
 
 <section id="services" class="pad" style="padding:200px 64px 0">
