@@ -1034,7 +1034,7 @@ renderVals() {
 const works = projects.map((p) => {
   const project = {
     ...p,
-    desc: p.desc || d.projDesc,
+    desc: p.desc || '',
     src: './assets/videos/' + p.file
   };
 
